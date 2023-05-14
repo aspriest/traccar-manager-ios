@@ -86,7 +86,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let urlString = "http://demo.traccar.org/api/server"
+        let urlString = "https://ts1.css-aus.com/api/server"
         
         if let url = URL(string: urlString) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -114,7 +114,7 @@ class StartViewController: UIViewController {
     }
 
     func onSuccess() {
-        UserDefaults.standard.set("http://demo.traccar.org", forKey: "url")
+        UserDefaults.standard.set("https://ts1.css-aus.com", forKey: "url")
         performSegue(withIdentifier: "StartSegue", sender: self)
     }
     
